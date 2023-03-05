@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { SetStateAction, useState } from "react";
 import { View, Text, StyleSheet, ScrollView, Image, TouchableOpacity } from "react-native";
 import Footer from "./Footer";
 import Header from "./Header";
@@ -21,7 +21,7 @@ type Props = {
 const ButtonGroup = () => {
   const [selectedButton, setSelectedButton] = useState('Weekly');
 
-  const handlePress = (button) => {
+  const handlePress = (button: SetStateAction<string>) => {
     setSelectedButton(button);
   };
 
