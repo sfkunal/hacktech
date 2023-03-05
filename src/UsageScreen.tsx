@@ -1,10 +1,12 @@
-import { View, Text, StyleSheet, ScrollView, Image } from "react-native";
+import { useState } from "react";
+import { View, Text, StyleSheet, ScrollView, Image, TouchableOpacity } from "react-native";
 import Footer from "./Footer";
 import Header from "./Header";
 import styles from "./styles";
 
-const graph = require('../assets/graph.png');
-const picker = require('../assets/picker.png');
+const weekly_graph = require('../assets/graph.png');
+const monthly_graph = require('../assets/monthly_graph.png')
+
 const hand = require('../assets/hand.png');
 const percent = require('../assets/percent.png');
 const play = require('../assets/play.png');
@@ -15,6 +17,32 @@ const jonah = require('../assets/jonah.png');
 type Props = {
   onClose: () => void;
 }
+
+const ButtonGroup = () => {
+  const [selectedButton, setSelectedButton] = useState('Weekly');
+
+  const handlePress = (button) => {
+    setSelectedButton(button);
+  };
+
+  return (
+    <View style={{ flexDirection: 'column', justifyContent: "space-evenly", alignItems: "center", paddingBottom: 20 }}>
+      <View style={{flexDirection: 'row', borderRadius: 8, justifyContent: "space-evenly", alignContent:"center", backgroundColor: "#3A3A3D", width: "100%", height: 40}}>
+        <TouchableOpacity onPress={() => handlePress('Weekly')} style={{borderRadius: 12,  backgroundColor: selectedButton === 'Weekly' ? 'grey' : 'transparent'}}>
+          <Text style={{color: "#FFFFFF", fontSize: 13, fontWeight: "bold", padding: 10}}>Weekly</Text>
+        </TouchableOpacity>
+        <TouchableOpacity onPress={() => handlePress('Monthly')} style={{borderRadius: 12,  backgroundColor: selectedButton === 'Monthly' ? 'grey' : 'transparent'}}>
+          <Text style={{color: "#FFFFFF", fontSize: 13, fontWeight: "bold", padding: 10}}>Monthly</Text>
+        </TouchableOpacity>
+        <TouchableOpacity onPress={() => handlePress('Yearly')} style={{borderRadius: 12,  backgroundColor: selectedButton === 'Yearly' ? 'grey' : 'transparent'}}>
+          <Text style={{color: "#FFFFFF", fontSize: 13, fontWeight: "bold", padding: 10}}>Yearly</Text>
+        </TouchableOpacity>
+      </View>
+      <View style={{height: 10}} />
+      <Image source={selectedButton === 'Weekly' ? weekly_graph : monthly_graph} style={{paddingBottom: 10}} />
+    </View>
+  );
+};
 
 const UsageScreen = ({ onClose }: Props) => {
   return (
@@ -28,12 +56,7 @@ const UsageScreen = ({ onClose }: Props) => {
         <View style={styles.separator} />
           <View style={{ flexDirection: 'column', paddingTop: 15, justifyContent: "space-evenly" }}>
             <Text style={{fontSize: 25, color: "#FFFFFF", paddingBottom: 20, fontWeight: 'bold'}}>Usage Screen</Text>
-
-            <View style={{ flexDirection: 'column', justifyContent: "space-evenly", alignItems: "center", paddingBottom: 20 }}>
-              <Image source={picker} style={{borderRadius: 30, paddingBottom: 5}} />
-              <Image source={graph} style={{paddingBottom: 10}} />
-            </View>
-
+            <ButtonGroup />
             <Text style={{fontSize: 25, color: "#FFFFFF", paddingBottom: 10, fontWeight: 'bold'}}>Trends</Text>
             <View style={{backgroundColor: "#464646", borderRadius: 10, flexDirection: 'column', justifyContent: "space-evenly", padding: 15}}>
               <View style={{flexDirection: 'row', justifyContent: "center", alignItems: "center", paddingHorizontal: 8}}>
