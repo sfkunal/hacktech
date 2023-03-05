@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { StyleSheet, TouchableOpacity, View, Image, Modal } from "react-native";
 import styles from "./styles";
 import { CleanScreen, DishwasherScreen, UsageScreen } from './screens';
-
+import { Path, Svg } from "react-native-svg";
 
 const cleanIcon = require("../assets/CLEAN.png");
 const dishwasherIcon = require("../assets/CAPACITY.png");

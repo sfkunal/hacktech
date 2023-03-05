@@ -5,7 +5,7 @@ import Header from "./Header";
 import Footer from "./Footer";
 import styles from "./styles";
 import { CleanScreen, DishwasherScreen, UsageScreen } from './screens';
-
+import { Path, Svg } from "react-native-svg";
 
 const cleanIcon = require("../assets/CLEAN.png");
 const dishwasherIcon = require("../assets/CAPACITY.png");
@@ -19,10 +19,12 @@ const App = () => {
 
   return (
     <NavigationContainer>
-      <View style={{ backgroundColor: "#272727", flex: 1 }}>
+      <View style={styles.container}>
         <Header />
         <View style={styles.separator} />
       </View>
+
+
       <View style={styles.footer}>
         <TouchableOpacity onPress={() => { setCleanModalVisible(true); setDishwasherModalVisible(false); setUsageModalVisible(false); }} style={styles.iconContainer}>
           <Image source={cleanIcon} style={styles.icon} />
@@ -43,7 +45,7 @@ const App = () => {
         <Modal animationType="none" visible={usageModalVisible}>
           <UsageScreen onClose={() => setUsageModalVisible(false)} />
         </Modal>
-      </View>
+    </View>
     </NavigationContainer>
   );
 };

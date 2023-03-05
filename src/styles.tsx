@@ -2,10 +2,22 @@ import { StyleSheet } from "react-native";
 
 
 const styles = StyleSheet.create({
+	text: {
+    fontFamily: 'SF-Pro-Text-Bold',
+    fontSize: 40,
+		color: "#FFFFFF",
+  },
+	container: {
+		backgroundColor: "#272727",
+		flex: 1,
+		paddingHorizontal: 32,
+	},
   separator: {
+		// width: '85%',
     borderBottomWidth: 1,
-    padding: 5,
     borderBottomColor: "#dcdcdc",
+		// alignSelf: "center",
+		// justifyContent: "center",
   },
   footer: {
     position: "absolute",
@@ -17,21 +29,38 @@ const styles = StyleSheet.create({
     alignItems: "center",
     backgroundColor: "#383838",
     opacity: 0.94,
-    paddingBottom: 8,
-    height: 86,
+    paddingBottom: 5,
+    height: 60,
   },
   iconContainer: {
     flex: 1,
     alignItems: "center",
   },
   icon: {
-    height: 44,
-    width: 29,
+    height: 33,
+    width: 33,
   },
 	screen: {
     flex: 1,
     alignItems: 'center',
     justifyContent: 'center',
+  },
+	header: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    paddingHorizontal: 32,
+    paddingTop: 55,
+    paddingBottom: 10,
+  },
+	logo: {
+    width: 200,
+    height: 50,
+  },
+  profilePicture: {
+    width: 45,
+    height: 45,
+    borderRadius: 20,
   },
 });
 

@@ -10,11 +10,12 @@ type Props = {
 
 const DishwasherScreen = ({ onClose }: Props) => {
   return (
-    <View style={{ backgroundColor: "#272727", flex: 1 }}>
+    <View style={styles.container}>
         <Header />
         <View style={styles.separator} />
-      <Text>Dishwasher Screen</Text>
-
+      <View style={{padding: 15}}>
+        <Text>Dishwasher Screen</Text>
+      </View>
       <Footer />
     </View>
   );

@@ -11,7 +11,7 @@ type Props = {
 const CleanScreen = ({ onClose }: Props) => {
   return (
     
-    <View style={{ backgroundColor: "#272727", flex: 1 }}>
+    <View style={styles.container}>
         <Header />
         <View style={styles.separator} />
       <Text>Clean Screen</Text>

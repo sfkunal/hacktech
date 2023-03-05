@@ -12,6 +12,14 @@
 		13B07FBC1A68108700A75B9A /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.mm */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
+		6CF8071329B44ACC00047D15 /* SF-Pro.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6CF8070F29B44ACC00047D15 /* SF-Pro.ttf */; };
+		6CF8071429B44ACC00047D15 /* SF-Pro.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6CF8070F29B44ACC00047D15 /* SF-Pro.ttf */; };
+		6CF8071529B44ACC00047D15 /* SF-Pro-Text-Semibold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 6CF8071029B44ACC00047D15 /* SF-Pro-Text-Semibold.otf */; };
+		6CF8071629B44ACC00047D15 /* SF-Pro-Text-Semibold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 6CF8071029B44ACC00047D15 /* SF-Pro-Text-Semibold.otf */; };
+		6CF8071729B44ACC00047D15 /* SF-Pro-Text-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 6CF8071129B44ACC00047D15 /* SF-Pro-Text-Regular.otf */; };
+		6CF8071829B44ACC00047D15 /* SF-Pro-Text-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 6CF8071129B44ACC00047D15 /* SF-Pro-Text-Regular.otf */; };
+		6CF8071929B44ACC00047D15 /* SF-Pro-Text-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 6CF8071229B44ACC00047D15 /* SF-Pro-Text-Bold.otf */; };
+		6CF8071A29B44ACC00047D15 /* SF-Pro-Text-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 6CF8071229B44ACC00047D15 /* SF-Pro-Text-Bold.otf */; };
 		7699B88040F8A987B510C191 /* libPods-hacktech-hacktechTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 19F6CBCC0A4E27FBF8BF4A61 /* libPods-hacktech-hacktechTests.a */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
@@ -41,6 +49,10 @@
 		5709B34CF0A7D63546082F79 /* Pods-hacktech.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-hacktech.release.xcconfig"; path = "Target Support Files/Pods-hacktech/Pods-hacktech.release.xcconfig"; sourceTree = "<group>"; };
 		5B7EB9410499542E8C5724F5 /* Pods-hacktech-hacktechTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-hacktech-hacktechTests.debug.xcconfig"; path = "Target Support Files/Pods-hacktech-hacktechTests/Pods-hacktech-hacktechTests.debug.xcconfig"; sourceTree = "<group>"; };
 		5DCACB8F33CDC322A6C60F78 /* libPods-hacktech.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-hacktech.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6CF8070F29B44ACC00047D15 /* SF-Pro.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "SF-Pro.ttf"; path = "../../assets/fonts/SF-Pro.ttf"; sourceTree = "<group>"; };
+		6CF8071029B44ACC00047D15 /* SF-Pro-Text-Semibold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "SF-Pro-Text-Semibold.otf"; path = "../../assets/fonts/SF-Pro-Text-Semibold.otf"; sourceTree = "<group>"; };
+		6CF8071129B44ACC00047D15 /* SF-Pro-Text-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "SF-Pro-Text-Regular.otf"; path = "../../assets/fonts/SF-Pro-Text-Regular.otf"; sourceTree = "<group>"; };
+		6CF8071229B44ACC00047D15 /* SF-Pro-Text-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "SF-Pro-Text-Bold.otf"; path = "../../assets/fonts/SF-Pro-Text-Bold.otf"; sourceTree = "<group>"; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = hacktech/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		89C6BE57DB24E9ADA2F236DE /* Pods-hacktech-hacktechTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-hacktech-hacktechTests.release.xcconfig"; path = "Target Support Files/Pods-hacktech-hacktechTests/Pods-hacktech-hacktechTests.release.xcconfig"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
@@ -106,6 +118,17 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		6CF8070E29B44A9B00047D15 /* fonts */ = {
+			isa = PBXGroup;
+			children = (
+				6CF8071229B44ACC00047D15 /* SF-Pro-Text-Bold.otf */,
+				6CF8071129B44ACC00047D15 /* SF-Pro-Text-Regular.otf */,
+				6CF8071029B44ACC00047D15 /* SF-Pro-Text-Semibold.otf */,
+				6CF8070F29B44ACC00047D15 /* SF-Pro.ttf */,
+			);
+			path = fonts;
+			sourceTree = "<group>";
+		};
 		832341AE1AAA6A7D00B99B32 /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
@@ -116,6 +139,7 @@
 		83CBB9F61A601CBA00E9B192 = {
 			isa = PBXGroup;
 			children = (
+				6CF8070E29B44A9B00047D15 /* fonts */,
 				13B07FAE1A68108700A75B9A /* hacktech */,
 				832341AE1AAA6A7D00B99B32 /* Libraries */,
 				00E356EF1AD99517003FC87E /* hacktechTests */,
@@ -235,6 +259,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6CF8071829B44ACC00047D15 /* SF-Pro-Text-Regular.otf in Resources */,
+				6CF8071629B44ACC00047D15 /* SF-Pro-Text-Semibold.otf in Resources */,
+				6CF8071A29B44ACC00047D15 /* SF-Pro-Text-Bold.otf in Resources */,
+				6CF8071429B44ACC00047D15 /* SF-Pro.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -242,7 +270,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6CF8071529B44ACC00047D15 /* SF-Pro-Text-Semibold.otf in Resources */,
+				6CF8071729B44ACC00047D15 /* SF-Pro-Text-Regular.otf in Resources */,
+				6CF8071929B44ACC00047D15 /* SF-Pro-Text-Bold.otf in Resources */,
 				81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */,
+				6CF8071329B44ACC00047D15 /* SF-Pro.ttf in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
