@@ -1,18 +1,18 @@
+import React from "react";
 import { useState } from "react";
 import { View, Text, StyleSheet, Image, TouchableOpacity, ScrollView, TextInput } from "react-native";
 import Footer from "./Footer";
 import Header from "./Header";
 import styles from "./styles";
-import NumericInput from 'react-native-numeric-input'
-import React from "react";
 
 type Props = {
   onClose: () => void;
 }
+const submitImage = require('../assets/load2.png');
+const accPhoto = require('../assets/account_photo.png');
+const washer = require('../assets/washer.png');
 
-const submitImage = require('../assets/load.png');
-
-const DishwasherScreen = ({ onClose }: Props) => {
+const SettingsScreen = ({ onClose }: Props) => {
   const [plates, onChangePlates] = React.useState('');
   const [bowls, onChangeBowls] = React.useState('');
   const [forks, onChangeForks] = React.useState('');
@@ -32,8 +32,31 @@ const DishwasherScreen = ({ onClose }: Props) => {
         <Header />
         <View style={styles.separator} />
           <View style={{ flexDirection: 'column', paddingTop: 15, justifyContent: "space-evenly", paddingBottom: 25 }}>
-            <Text style={{fontSize: 25, color: "#FFFFFF", paddingBottom: 5, fontWeight: 'bold'}}>Load Dishes</Text>
-            <Text style={{fontSize: 12, color: "#ACACAC", paddingBottom: 10}}>Enter the number of each item that will fit in your {'\n'}dishwasher in a typical cycle.</Text>
+						<View style={{backgroundColor: "#464646", flexDirection: 'row', justifyContent: "flex-start", alignItems: "center", paddingVertical: 20, paddingHorizontal: 10, borderRadius: 10 }}>
+							<Image source={accPhoto} style={{paddingRight: 20}}/>
+							<View style={{flexDirection: "column", paddingLeft: 20}}>
+								<Text style={{fontSize: 22, color: "#FFFFFF"}}>John Green</Text>
+								<Text style={{fontSize: 13, color: "#FFFFFF"}}>7827 NE 58th Street</Text>
+							</View>
+						</View>
+						<View style={{height: 20 }} />
+						<View style={{backgroundColor: "#464646", flexDirection: 'row', justifyContent: "flex-start", alignItems: "center", paddingVertical: 10, paddingHorizontal: 10, borderRadius: 10 }}>
+							<Image source={washer} style={{paddingRight: 20}}/>
+							<View style={{flexDirection: "column", paddingLeft: 10}}>
+								<Text style={{fontSize: 14, color: "#787878"}}>Dishwasher Model:</Text>
+								<Text style={{fontSize: 14, color: "#FFFFFF"}}>Whirlpool WDT730HAMZ</Text>
+								<View style={{height: 10 }} />
+								<Text style={{fontSize: 14, color: "#787878"}}>Water Consumption:</Text>
+								<Text style={{fontSize: 14, color: "#FFFFFF"}}>3 Gal/Cycle</Text>
+								<View style={{height: 10 }} />
+								<Text style={{fontSize: 14, color: "#787878"}}>Efficiency:</Text>
+								<Text style={{fontSize: 14, color: "#76D780"}}>High</Text>
+							</View>
+						</View>
+						<View style={{height: 20 }} />
+						<Text style={{fontSize: 12, color: "#FFFFFF", paddingBottom: 10}}>Enter the number of each item that will fit in your {'\n'}dishwasher at its maximum capacity.</Text>
+
+
             <View style={{backgroundColor: "#1C1C1E",flexDirection: 'column', justifyContent: "space-evenly", borderRadius: 10 }}>
               <View style={{flexDirection: 'row', justifyContent: "space-between", alignItems: "center", padding: 4 }}>
                 <Text style={{paddingLeft: 10, color: "#FFFFFF", fontSize: 15.5}}>Plates</Text>
@@ -147,4 +170,4 @@ const DishwasherScreen = ({ onClose }: Props) => {
   );
 };
 
-export default DishwasherScreen
+export default SettingsScreen
