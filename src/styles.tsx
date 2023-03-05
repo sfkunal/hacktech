@@ -25,15 +25,15 @@ const styles = StyleSheet.create({
     left: 0,
     right: 0,
     flexDirection: "row",
-    justifyContent: "space-around",
+    justifyContent: "space-evenly",
     alignItems: "center",
     backgroundColor: "#383838",
     opacity: 0.94,
     paddingBottom: 5,
-    height: 60,
+    height: 70,
   },
   iconContainer: {
-    flex: 1,
+    // flex: 1,
     alignItems: "center",
   },
   icon: {

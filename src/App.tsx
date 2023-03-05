@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Image, StyleSheet, TouchableOpacity, View, Modal } from "react-native";
+import { Image, StyleSheet, TouchableOpacity, View, Modal, Text } from "react-native";
 import { NavigationContainer } from "@react-navigation/native";
 import Header from "./Header";
 import Footer from "./Footer";
@@ -28,12 +28,20 @@ const App = () => {
 
 
       <View style={styles.footer}>
-        <TouchableOpacity onPress={() => { setCleanModalVisible(true); setDishwasherModalVisible(false); setUsageModalVisible(false); setSettingsModalVisible(false);}} style={styles.iconContainer}>
-          <Image source={cleanIcon} style={styles.icon} />
-        </TouchableOpacity>
-        <TouchableOpacity onPress={() => { setCleanModalVisible(false); setDishwasherModalVisible(true); setUsageModalVisible(false); setSettingsModalVisible(false);}} style={styles.iconContainer}>
-          <Image source={dishwasherIcon} style={styles.icon} />
-        </TouchableOpacity>
+        <View style={{ flexDirection: 'column'}}>
+          <TouchableOpacity onPress={() => { setCleanModalVisible(true); setDishwasherModalVisible(false); setUsageModalVisible(false); setSettingsModalVisible(false);}} style={styles.iconContainer}>
+            <Image source={cleanIcon} style={styles.icon} />
+          </TouchableOpacity>
+          <Text style={{fontSize: 10, color: "#FFFFFF"}}>Clean</Text>
+        </View>
+
+        <View style={{ flexDirection: 'column'}}>
+          <TouchableOpacity onPress={() => { setCleanModalVisible(false); setDishwasherModalVisible(true); setUsageModalVisible(false); setSettingsModalVisible(false);}} style={styles.iconContainer}>
+            <Image source={dishwasherIcon} style={styles.icon} />
+          </TouchableOpacity>
+          <Text style={{fontSize: 10, color: "#FFFFFF"}}>Dishwasher</Text>
+        </View>
+        
         <TouchableOpacity onPress={() => { setCleanModalVisible(false); setDishwasherModalVisible(false); setUsageModalVisible(true); setSettingsModalVisible(false);}} style={styles.iconContainer}>
           <Image source={usageIcon} style={styles.icon} />
         </TouchableOpacity>
