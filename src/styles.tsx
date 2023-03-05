@@ -62,6 +62,15 @@ const styles = StyleSheet.create({
     height: 45,
     borderRadius: 20,
   },
+  input: {
+    position: "relative",
+    height: 30,
+    margin: 6,
+    // borderWidth: 1,
+    padding: 8,
+    color: "#FFFFFF",
+    fontSize: 16
+  },
 });
 
 export default styles
